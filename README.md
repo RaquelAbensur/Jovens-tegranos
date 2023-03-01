@@ -1,6 +1,7 @@
 # Jovens Tegranos
 
-![preview]()
+![preview](./.github/previewTela.png)
+![preview](./.github/previewExercicio.png)
 
 > Jovens Tegranos
 
