@@ -1,0 +1,66 @@
+<!--Fazer um programa para ler o valor "r" do raio de um círculo, e depois
+mostrar o valor da área do círculo com três casas decimais. A fórmula da
+área do círculo é a seguinte: área = π. r². O valor de π corresponde a 3.14159.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler o valor "r" do raio de um círculo, e depois
+              mostrar o valor da área do círculo com três casas decimais. A fórmula da
+              área do círculo é a seguinte: área = π. r². O valor de π corresponde a 3.14159.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 5</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+              
+                    <label for="raio">Digite o valor do raio do circulo: </label>
+                    <input type="number" name="raio" id="raio" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+            
+                    <input type="button" value="Calcular" class="botao" onClick="calculararea(document.calc)">
+
+                    <p id="areacirculo"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

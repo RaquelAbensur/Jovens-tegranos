@@ -1,0 +1,76 @@
+<!--Fazer um programa para ler o nome e idade de duas pessoas. Ao final
+mostrar uma mensagem com os nomes e a idade média entre essas
+pessoas, com uma casa decimal.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler o nome e idade de duas pessoas. Ao final
+              mostrar uma mensagem com os nomes e a idade média entre essas
+              pessoas, com uma casa decimal.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 3</legend>
+                      <input type="reset" class="limpar" value="Limpar campos"/>
+                
+                      <label for="nome1">Digite um nome: </label>
+                      <input type="text" name="nome1" id="nome1" placeholder="Maria Silva" maxLength="30" oninput="this.value=this.value.slice(0,this.maxLength)">
+                
+                      <label for="idade1">Digite uma idade para essa pessoa: </label>
+                      <input type="number" name="idade1" id="idade1" placeholder="19" maxLength="3" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,0)">
+
+                      <label for="nome2">Digite um segundo nome: </label>
+                      <input type="text" name="nome2" id="nome2" placeholder="João Melo" maxLength="30" oninput="this.value=this.value.slice(0,this.maxLength)">
+                
+                      <label for="idade2">Digite uma idade para essa pessoa: </label>
+                      <input type="number" name="idade2" id="idade2" placeholder="20" maxLength="3" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,0)">
+                
+                      <input type="button" value="Calcular" class="botao" onClick="calcularmedia(document.calc)">
+                  
+                      <p id="resposta"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+      
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

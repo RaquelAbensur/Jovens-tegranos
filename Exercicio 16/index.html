@@ -1,0 +1,70 @@
+<!--No arremesso de dardo, o atleta tem três chances para lançar o dardo à
+maior distância que conseguir. Você deve criar um programa para, dadas
+as medidas das três tentativas de lançamento, informar qual foi a maior.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>      
+    
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>No arremesso de dardo, o atleta tem três chances para lançar o dardo à
+              maior distância que conseguir. Você deve criar um programa para, dadas
+              as medidas das três tentativas de lançamento, informar qual foi a maior.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 16</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+                    
+                    <h3>Digite as três distâncias:</h3>
+                    <label for="num1"></label>
+                    <input type="number" name="num1" id="num1" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+                    <label for="num2"></label>
+                    <input type="number" name="num2" id="num2" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+                    <label for="num3"></label>
+                    <input type="number" name="num3" id="num3" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calculardistancia(document.calc)">
+
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

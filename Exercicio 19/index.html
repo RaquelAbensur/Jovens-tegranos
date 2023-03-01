@@ -1,0 +1,81 @@
+<!--Uma empresa vai conceder um aumento percentual de salário aos seus
+funcionários dependendo de quanto cada pessoa ganha, conforme tabela
+ao lado. Fazer um programa para ler o salário de uma pessoa, daí mostrar
+qual o novo salário dessa pessoa depois do aumento, quanto foi o aumento
+e qual foi a porcentagem de aumento.
+
+Salário atual Aumento
+Até R$ 999.00 -> 20%
+Entre R$ 1000.00 e R$ 2999.00 -> 15%
+Entre R$ 3000.00 e R$ 7999.00 -> 10%
+Acima de R$ 8000.00 -> 05%-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>        
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Uma empresa vai conceder um aumento percentual de salário aos seus
+              funcionários dependendo de quanto cada pessoa ganha, conforme tabela
+              ao lado. Fazer um programa para ler o salário de uma pessoa, daí mostrar
+              qual o novo salário dessa pessoa depois do aumento, quanto foi o aumento
+              e qual foi a porcentagem de aumento.
+              
+              Salário atual Aumento
+              Até R$ 999.00 -> 20%
+              Entre R$ 1000.00 e R$ 2999.00 -> 15%
+              Entre R$ 3000.00 e R$ 7999.00 -> 10%
+              Acima de R$ 8000.00 -> 05%</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 19</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+                    
+                    <label for="valor">Digite o salario da pessoa: </label>
+                    <input type="number" name="valor" id="valor" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calcularsalario(document.calc)">
+
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

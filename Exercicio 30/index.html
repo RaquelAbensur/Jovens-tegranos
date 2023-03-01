@@ -1,0 +1,66 @@
+<!--Escreva um programa que receba um valor numérico de até dois
+algarismos e transcreva esse valor por extenso.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Estudante Dev Front End e Back End</h3>
+        </div>
+      </div>
+    </header>   
+    
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Escreva um programa que receba um valor numérico de até dois
+              algarismos e transcreva esse valor por extenso.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 30</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+                    
+                    <label for="num"> Digite um número até 99: </label>
+                    <input type="text" name="num" id="num" placeholder="00" maxLength="2" oninput="this.value=this.value.slice(0,this.maxLength)">
+                    
+
+                    <input type="button" value="Calcular" class="botao" onclick="numeroPorExtenso(document.calc)">
+
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+    
+  </body>
+</html>
+

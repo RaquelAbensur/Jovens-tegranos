@@ -1,0 +1,71 @@
+<!--Fazer um programa para ler três números inteiros. Em seguida, mostrar
+qual o menor dentre os três números lidos. Em caso de empate, mostrar
+apenas uma vez-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>  
+    
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler três números inteiros. Em seguida, mostrar
+              qual o menor dentre os três números lidos. Em caso de empate, mostrar
+              apenas uma vez</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 10</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+                    
+                    <label for="num1">Digite o primeiro número: </label>
+                    <input type="number" name="num1" id="num1" placeholder="0" maxLength="5" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,0)">
+
+                    <label for="num2">Digite o segundo número: </label>
+                    <input type="number" name="num2" id="num2" placeholder="0" maxLength="5" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,0)">
+              
+                    <label for="num3">Digite o terceiro número: </label>
+                    <input type="number" name="num3" id="num3" placeholder="0" maxLength="5" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,0)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calcmenor(document.calc)">
+
+                    <p id="resposta"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

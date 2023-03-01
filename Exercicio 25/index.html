@@ -1,0 +1,89 @@
+<!--Receber valores numéricos para o dia e o mês de nascimento de uma
+pessoa; Exibir o signo da pessoa de acordo com os seguintes critérios:
+Áries: de 21 de março a 20 de abril;
+Touro: de 21 de abril a 20 de maio;
+Gêmeos: de 21 de maio a 20 de junho;
+Câncer: de 21 de junho a 22 de julho;
+Leão: de 23 de julho a 22 de agosto;
+Virgem: de 23 de agosto a 22 de setembro;
+Libra: de 23 de setembro a 22 de outubro;
+Escorpião: de 23 de outubro a 21 de novembro;
+Sagitário: de 22 de novembro a 21 de dezembro;
+Capricórnio: de 22 de dezembro a 20 de janeiro;
+Aquário: de 21 de janeiro a 18 de fevereiro;
+Peixes: de 19 de fevereiro a 20 de março;
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Estudante Dev Front End e Back End</h3>
+        </div>
+      </div>
+    </header>        
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Receber valores numéricos para o dia e o mês de nascimento de uma
+              pessoa; Exibir o signo da pessoa de acordo com os seguintes critérios:<br>
+              Áries: de 21 de março a 20 de abril;<br>
+              Touro: de 21 de abril a 20 de maio;<br>
+              Gêmeos: de 21 de maio a 20 de junho;<br>
+              Câncer: de 21 de junho a 22 de julho;<br>
+              Leão: de 23 de julho a 22 de agosto;<br>
+              Virgem: de 23 de agosto a 22 de setembro;<br>
+              Libra: de 23 de setembro a 22 de outubro;<br>
+              Escorpião: de 23 de outubro a 21 de novembro;<br>
+              Sagitário: de 22 de novembro a 21 de dezembro;<br>
+              Capricórnio: de 22 de dezembro a 20 de janeiro;<br>
+              Aquário: de 21 de janeiro a 18 de fevereiro;<br>
+              Peixes: de 19 de fevereiro a 20 de março;</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 25</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+                    
+                    <label for="num">Informe sua data de nascimento: </label>
+                    <input type="number" id="day" placeholder="0" maxLength="2" oninput="this.value=this.value.slice(0,this.maxLength), limitDecimalPlaces(event,0)">
+                    <input type="number" id="month" placeholder="0" maxLength="2" oninput="this.value=this.value.slice(0,this.maxLength), limitDecimalPlaces(event,0)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="mostrarsigno(document.calc)">
+
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

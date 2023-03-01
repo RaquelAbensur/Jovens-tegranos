@@ -1,0 +1,73 @@
+<!--Fazer um programa para ler os três coeficientes de uma equação do
+segundo grau. Usando a fórmula de Bhaskara, calcular e mostrar os valores
+das raízes x1 e x2 da equação com quatro casas decimais, conforme
+exemplos. Se a equação não possuir raízes reais, mostrar uma mensagem.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>  
+    
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler os três coeficientes de uma equação do
+              segundo grau. Usando a fórmula de Bhaskara, calcular e mostrar os valores
+              das raízes x1 e x2 da equação com quatro casas decimais, conforme
+              exemplos. Se a equação não possuir raízes reais, mostrar uma mensagem.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 12</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+              
+                    <label for="numA">Digite o coeficiente de A: </label>
+                    <input type="number" name="numA" id="numA" placeholder="0" oninput="limitDecimalPlaces(event,1)">
+
+                    <label for="numB">Digite o coeficiente de B: </label>
+                    <input type="number" name="numB" id="numB" placeholder="0" oninput="limitDecimalPlaces(event,1)">
+
+                    <label for="numC">Digite o coeficiente de C: </label>
+                    <input type="number" name="numC" id="numC" placeholder="0" oninput="limitDecimalPlaces(event,1)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calcularequacao(document.calc)">
+
+                    <p id="resposta"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

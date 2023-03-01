@@ -1,0 +1,63 @@
+<!--Fazer um programa para ler uma duração de tempo em segundos, daí
+imprimir na tela esta duração no formato horas:minutos:segundos.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler uma duração de tempo em segundos, daí
+              imprimir na tela esta duração no formato horas:minutos:segundos.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+        <div>
+          <form name="calc" method="post" action="">
+              <fieldset>
+                <legend>Exercicio 9</legend>
+                <input type="reset" class="limpar" value="Limpar campos"/>
+          
+                <label for="segundos">Digite a duração em segundos: </label>
+                <input type="number" id="segundos" placeholder="0" maxLength="13" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,0)">
+          
+                <input type="button" value="Calcular" class="botao" onClick="converter(document.calc)">
+
+                <p id="resposta"></p>
+              </fieldset>
+          </form>
+        </div>    
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

@@ -1,0 +1,74 @@
+<!--Fazer um programa para ler três medidas A, B e C. Em seguida, calcular e
+mostrar (imprimir os dados com quatro casas decimais):
+a) a área do quadrado que tem lado A
+b) a área do triângulo retângulo que base A e altura B
+c) a área do trapézio que tem bases A e B, e altura C-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>          
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler três medidas A, B e C. Em seguida, calcular e
+              mostrar (imprimir os dados com quatro casas decimais):
+              a) a área do quadrado que tem lado A
+              b) a área do triângulo retângulo que base A e altura B
+              c) a área do trapézio que tem bases A e B, e altura C</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+        <div>
+          <form name="calc" method="post" action="">
+              <fieldset>
+                <legend>Exercicio 8</legend>
+                <input type="reset" class="limpar" value="Limpar campos"/>
+          
+                <label for="medidaA">Digite a medida A: </label>
+                <input type="number" name="medidaA" id="medidaA" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+  
+                <label for="medidaB">Digite a medida B: </label>
+                <input type="number" name="medidaB" id="medidaB" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+          
+                <label for="medidaC">Digite a medida C: </label>
+                <input type="number" name="medidaC" id="medidaC" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+          
+                <input type="button" value="Calcular" class="botao" onClick="calculararea(document.calc)">
+  
+                <p id="resposta"></p>
+              </fieldset>
+          </form>
+        </div>        
+      </section>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

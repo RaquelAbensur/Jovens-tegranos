@@ -1,0 +1,74 @@
+<!--Fazer um programa para ler as duas notas que um aluno obteve no
+primeiro e segundo semestres de uma disciplina anual. Em seguida,
+mostrar a nota final que o aluno obteve (com uma casa decimal) no ano
+juntamente com um texto explicativo. Caso a nota final do aluno seja
+inferior a 60.00, mostrar a mensagem "REPROVADO", conforme exemplos.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+      
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>        
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler as duas notas que um aluno obteve no
+              primeiro e segundo semestres de uma disciplina anual. Em seguida,
+              mostrar a nota final que o aluno obteve (com uma casa decimal) no ano
+              juntamente com um texto explicativo. Caso a nota final do aluno seja
+              inferior a 60.00, mostrar a mensagem "REPROVADO", conforme exemplos.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 11</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+              
+                    <label for="nota1">Digite a primeira nota: </label>
+                    <input type="number" name="nota1" id="nota1" placeholder="0" maxLength="4" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,1)">
+
+                    <label for="nota2">Digite a segunda nota: </label>
+                    <input type="number" name="nota2" id="nota2" placeholder="0" maxLength="4" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,1)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calcularnota(document.calc)">
+
+                    <p id="notafinal"></p>
+                    <p id="resposta"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

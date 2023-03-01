@@ -1,0 +1,67 @@
+<!--Leia dois valores inteiros X e Y. A seguir, calcule e mostre a soma dos
+números ímpares entre eles.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Estudante Dev Front End e Back End</h3>
+        </div>
+      </div>
+    </header>    
+    
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Leia dois valores inteiros X e Y. A seguir, calcule e mostre a soma dos
+              números ímpares entre eles.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+        <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 23</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+                    
+                    <label for="numX">Insira um número inteiro para X: </label>
+                    <input type="number" name="numX" id="numX" placeholder="0" maxlength="35" oninput="this.value=this.value.slice(0,this.maxLength), limitDecimalPlaces(event,0)">
+
+                    <label for="numY">Insira um número inteiro para y: </label>
+                    <input type="number" name="numY" id="numY" placeholder="0" maxlength="15" oninput="this.value=this.value.slice(0,this.maxLength), limitDecimalPlaces(event,0)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calculoSomaImpar(document.calc)">
+
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+        </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

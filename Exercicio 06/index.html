@@ -1,0 +1,74 @@
+<!--Fazer um programa para ler o nome de um(a) funcionário(a), o valor que
+ele(a) recebe por hora, e a quantidade de horas trabalhadas por ele(a). Ao
+final, mostrar o valor do pagamento do funcionário com uma mensagem
+explicativa, conforme exemplo.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>          
+    </header>
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler o nome de um(a) funcionário(a), o valor que
+              ele(a) recebe por hora, e a quantidade de horas trabalhadas por ele(a). Ao
+              final, mostrar o valor do pagamento do funcionário com uma mensagem
+              explicativa, conforme exemplo.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+        <div>
+          <form name="calc" method="post" action="">
+            <fieldset>
+              <legend>Exercicio 6</legend>
+              <input type="reset" class="limpar" value="Limpar campos"/>
+          
+              <label for="nome">Digite o nome do funcionário: </label>
+              <input type="text" name="nome" id="nome" placeholder="Joâo Silva" maxLength="15" oninput="this.value=this.value.slice(0,this.maxLength)">
+
+              <label for="valorhora">Digite o valor recebido por hora: </label>
+              <input type="number" name="valorhora" id="valorhora" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+
+              <label for="quanthora">Digite a quantidade de horas trabalhadas: </label>
+              <input type="number" name="quanthora" id="quanthora" placeholder="0" maxLength="5" oninput="this.value=this.value.slice(0,this.maxLength),limitDecimalPlaces(event,0)">
+          
+              <input type="button" value="Calcular" class="botao" onClick="calcularpagamento(document.calc)">
+
+              <p id="resposta"></p>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

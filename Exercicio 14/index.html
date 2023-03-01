@@ -1,0 +1,77 @@
+<!--Fazer um programa para calcular o troco no processo de pagamento de
+um produto de uma mercearia. O programa deve ler o preço unitário do
+produto, a quantidade de unidades compradas deste produto, e o valor em
+dinheiro dado pelo cliente. Seu programa deve mostrar o valor do troco a
+ser devolvido ao cliente. Se o dinheiro dado pelo cliente não for suficiente,
+mostrar uma mensagem informando o valor restante conforme exemplo.-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>  
+    
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para calcular o troco no processo de pagamento de
+              um produto de uma mercearia. O programa deve ler o preço unitário do
+              produto, a quantidade de unidades compradas deste produto, e o valor em
+              dinheiro dado pelo cliente. Seu programa deve mostrar o valor do troco a
+              ser devolvido ao cliente. Se o dinheiro dado pelo cliente não for suficiente,
+              mostrar uma mensagem informando o valor restante.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 14</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+              
+                    <label for="valor1">Digite o preço do produto: </label>
+                    <input type="number" name="valor1" id="valor1" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+              
+                    <label for="quant">Digite a quantidade comprada: </label>
+                    <input type="number" name="quant" id="quant" placeholder="0" maxLength="5" oninput="this.value=this.value.slice(0,this.maxLength)">
+
+                    <label for="valor2">Digite o valor do dinheiro recebido: </label>
+                    <input type="number" name="valor2" id="valor2" placeholder="00.00" oninput="limitDecimalPlaces(event,2)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calculartroco(document.calc)">
+
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

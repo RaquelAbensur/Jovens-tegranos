@@ -1,0 +1,77 @@
+<!--Deseja-se converter uma medida de temperatura da escala Celsius para
+Fahrenheit ou vice-versa. Para isso, você deve construir um programa que
+leia a letra "C" ou "F" indicando em qual escala vai ser informada uma
+temperatura. Em seguida, o programa deve mostrar a temperatura na
+outra escala com duas casas decimais. Você deve pesquisar as fórmulas
+para conversão de Fahrenheit->Celsius e de Celsius->Fahrenheit.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>        
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Deseja-se converter uma medida de temperatura da escala Celsius para
+              Fahrenheit ou vice-versa. Para isso, você deve construir um programa que
+              leia a letra "C" ou "F" indicando em qual escala vai ser informada uma
+              temperatura. Em seguida, o programa deve mostrar a temperatura na
+              outra escala com duas casas decimais. Você deve pesquisar as fórmulas
+              para conversão de Fahrenheit->Celsius e de Celsius->Fahrenheit.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 18</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+                    
+                    <label for="temp">Digite a temperatura: </label>
+                    <input type="number" name="temp" id="temp" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+
+                    <label for="escala">Selecione a escala:</label>
+                    <select name="escala" id="escala">
+                      <option value="celsius">Cº</option>
+                      <option value="fahren">Fº</option>
+                    </select>
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calculartemperatura(document.calc.escala.value)">
+
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

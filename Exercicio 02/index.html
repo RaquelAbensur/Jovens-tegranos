@@ -1,0 +1,71 @@
+<!--Fazer um programa para ler as medidas da base e altura de um retângulo.
+Em seguida, mostrar o valor da área, perímetro e diagonal deste retângulo,
+com quatro casas decimais.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>
+
+    <main>
+      
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler as medidas da base e altura de um retângulo.
+              Em seguida, mostrar o valor da área, perímetro e diagonal deste retângulo,
+              com quatro casas decimais.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+        <div>
+          <form name="calc" method="post" action="">
+            <fieldset>
+              <legend>Exercicio 2</legend>
+                <input type="reset" class="limpar" value="Limpar campos"/>
+              
+                    <label for="valor1">Digite a medida da base do retângulo: </label>
+                    <input type="number" name="valor1" id="valor1" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+              
+                    <label for="valor2">Digite a medida da altura do retângulo: </label>
+                    <input type="number" name="valor2" id="valor2" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calculararea(document.calc); calcularperimetro(document.calc); calculardiagonal(document.calc)">
+                  
+                    <p id="area"></p>
+                    <p id="perimetro"></p>
+                    <p id="diagonal"></p>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+      
+    </main>
+
+    <script src="script.js"></script>
+  </body>
+</html>
+

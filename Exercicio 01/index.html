@@ -1,0 +1,78 @@
+<!--Fazer um programa para ler as medidas da largura e comprimento de um
+terreno retangular com uma casa decimal, bem como o valor do metro
+quadrado do terreno com duas casas decimais. Em seguida, o programa
+deve mostrar o valor da área do terreno, bem como o valor do preço do
+terreno, ambos com duas casas decimais, conforme exemplo.
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+        <div class="perfil">
+          <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+            <div class="titulo">
+              <h1>Raquel Abensur</h1> 
+              <h3>Desenvolvedora Front End e Back End</h3>
+            </div>
+        </div>
+      </div>
+    </header>
+    
+    <main>
+      
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler as medidas da largura e comprimento de um
+              terreno retangular com uma casa decimal, bem como o valor do metro
+              quadrado do terreno com duas casas decimais. Em seguida, o programa
+              deve mostrar o valor da área do terreno, bem como o valor do preço do
+              terreno, ambos com duas casas decimais, conforme exemplo.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+          </div>
+      </section>
+
+      <section>
+        <div>
+          <form name="calc" method="post" action="">
+            <fieldset>
+              <legend>Exercicio 1</legend>
+                <input type="reset" class="limpar" value="Limpar campos"/>
+                
+                <label for="valor1">Digite a medida da largura do terreno: </label>
+                <input type="number" name="valor1" id="valor1" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+                
+                <label for="valor2">Digite a medida do comprimento do terreno: </label>
+                <input type="number" name="valor2" id="valor2" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+
+                <label for="valor2">Digite o valor do metro quadrado: </label>
+                <input type="number" name="valor3" id="valor3" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+                
+                <input type="button" value="Calcular" class="botao" onClick="calculararea(document.calc); calcularpreco(document.calc)">
+                
+                <p id="area"></p>
+                <p id="preco"></p>
+            </fieldset>
+          </form>
+        </div>
+      </section>
+
+    </main>
+      
+    <script src="./script.js"></script>
+  </body>
+</html>
+

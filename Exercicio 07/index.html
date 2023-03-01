@@ -1,0 +1,73 @@
+<!--Fazer um programa para ler a distância total (em km) percorrida por um
+carro, bem como o total de combustível gasto por este carro ao percorrer
+tal distância. Seu programa deve mostrar o consumo médio do carro, com
+três casas decimais-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+    
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>         
+      </div>
+    </header>
+
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler a distância total (em km) percorrida por um
+              carro, bem como o total de combustível gasto por este carro ao percorrer
+              tal distância. Seu programa deve mostrar o consumo médio do carro, com
+              três casas decimais.</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+        <div>
+          <form name="calc" method="post" action="">
+            <fieldset>
+              <legend>Exercicio 7</legend>
+              <input type="reset" class="limpar" value="Limpar campos"/>
+        
+              <label for="distancia">Digite a distância percorrida (KM): </label>
+              <input type="number" name="distancia" id="distancia" placeholder="0 km">
+
+              <label for="combustivel">Digite o total de combustivel gasto: </label>
+              <input type="number" name="combustivel" id="combustivel" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+        
+              <label for="consumo">Consumo Médio: </label>
+              <input type="number" name="consumo" id="consumo" placeholder="0.000">
+        
+              <input type="button" value="Calcular" class="botao" onClick="calcularconsumo(document.calc)">
+
+              <p id="consumoM"></p>
+            </fieldset>
+        </form>    
+        </div>
+      </section>
+      
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

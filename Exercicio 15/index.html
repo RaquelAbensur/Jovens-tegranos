@@ -1,0 +1,76 @@
+<!--Fazer um programa para ler a quantidade de glicose no sangue de uma
+pessoa e depois mostrar na tela a classificação desta glicose de acordo
+com a tabela de referência abaixo:
+
+Classificação Glicose
+Normal -> Até 100 mg/dl
+Elevado -> Entre 100 e 140 mg/dl
+Diabetes -> Maior que 140 mg/dl
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Desenvolvedora Front End e Back End</h3>
+        </div>
+      </div>
+    </header>    
+    
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Fazer um programa para ler a quantidade de glicose no sangue de uma
+              pessoa e depois mostrar na tela a classificação desta glicose de acordo
+              com a tabela de referência abaixo:
+              
+              Classificação Glicose
+              Normal -> Até 100 mg/dl
+              Elevado -> Entre 100 e 140 mg/dl
+              Diabetes -> Maior que 140 mg/dl</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 15</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+              
+                    <label for="glicose">Digite a medida da glicose: </label>
+                    <input type="number" name="glicose" id="glicose" placeholder="0.0" oninput="limitDecimalPlaces(event,1)">
+              
+                    <input type="button" value="Calcular" class="botao" onClick="calculardiabetes(document.calc)">
+
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
+

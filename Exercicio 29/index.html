@@ -1,0 +1,72 @@
+<!--Pesquise o algoritmo de validação do CNPJ escreva um programa que
+valide qualquer CNPJ dado;
+
+70.345.111/0001-09
+invalido
+
+97.544.324/0001-22
+valido
+
+-->
+
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+      <meta charset="UTF-8">
+      <title>JovensTegranos</title>
+      <link rel="stylesheet" type="text/css" href="./../css/style.css">
+  </head>
+  <body>
+
+    <header class="cabecalho">
+      <div class="perfil">
+        <img class="perfil-foto" src="https://github.com/RaquelAbensur.png">
+        <div class="titulo">
+          <h1>Raquel Abensur</h1> 
+          <h3>Estudante Dev Front End e Back End</h3>
+        </div>
+      </div>
+    </header>    
+    
+    <main>
+
+      <section>
+        <div>
+          <fieldset class="texto">
+            <p>Pesquise o algoritmo de validação do CNPJ escreva um programa que
+              valide qualquer CNPJ dado;</p>
+          </fieldset>
+        </div>
+      </section>
+
+      <section>
+          <div>
+            <button class="mudar" onClick="mudaModo()">Alterar tema</button>
+            <button class="limpar" >Limpar campos</button>
+          </div>
+      </section>
+
+      
+      <section>
+          <div>
+              <form name="calc" method="post" action="">
+                  <fieldset>
+                    <legend>Exercicio 29</legend>
+                    <input type="reset" class="limpar" value="Limpar campos"/>
+                    
+                    <label for="num">Insira seu CNPJ para validar </label>
+                    <p>necessário dos caracteres . / e -</p>
+                    <input name="cnpj" type="text" id="cnpj" maxlength="25" placeholder="00.000.000/0001-00"/> 
+                    <input type="button" value="Validar cnpj" class="botao" onClick="validaCNPJ(document.calc)" />
+                                        
+                    <p id="result"></p>
+                  </fieldset>
+              </form>
+          </div>
+      </section>
+
+    </main>
+    <script src="./script.js"></script>
+  </body>
+</html>
+
