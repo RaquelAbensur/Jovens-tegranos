@@ -6,7 +6,7 @@
 
 Exercicios feitos para o projeto Jovens Tegranos da Tegra
 
-Link para acessar clicando ▫️ [AQUI](https://raquelabensur.github.io/) ▫️
+Link para acessar clicando ▫️ [AQUI](https://raquelabensur.github.io/Jovens-tegranos) ▫️
 
 ## 👩‍💻 Tecnologias
 
