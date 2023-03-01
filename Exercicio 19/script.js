@@ -54,9 +54,9 @@ function calcularsalario() {
     Aumento: R$${aumento.toFixed(2)}
     Porcentagem: ${porcentagem} %`;
   }
-  /* 05% */
+  /* 5% */
   else {
-    porcentagem = 0.5;
+    porcentagem = 5;
     aumento = (porcentagem / 100) * valor;
     newsalario = valor + aumento;
     var mensagem = `Novo sálario: R$${newsalario.toFixed(2)}
