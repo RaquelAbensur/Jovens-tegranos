@@ -37,7 +37,7 @@ function calcularsalario() {
     Porcentagem: ${porcentagem} %`;
   }
   /* 15% */ 
-  else if (valor => 1000 && valor <= 2999) {
+  else if ((valor => 1000) && (valor <= 2999)) {
     porcentagem = 15;
     aumento = (porcentagem / 100) * valor;
     newsalario = valor + aumento;
@@ -46,7 +46,7 @@ function calcularsalario() {
     Porcentagem: ${porcentagem} %`;
   }
   /* 10% */
-  else if(valor => 3000 && valor <= 7999) {
+  else if ((valor => 3000) && (valor <= 7999)) {
     porcentagem = 10;
     aumento = (porcentagem / 100) * valor;
     newsalario = valor + aumento;

@@ -64,7 +64,7 @@ Acima de R$ 8000.00 -> 05%-->
                     <input type="reset" class="limpar" value="Limpar campos"/>
                     
                     <label for="valor">Digite o salario da pessoa: </label>
-                    <input type="number" name="valor" id="valor" placeholder="0.00" oninput="limitDecimalPlaces(event,2)">
+                    <input type="number" name="valor" id="valor" placeholder="0.00"maxLength="5" oninput="this.value=this.value.slice(0,this.maxLength), limitDecimalPlaces(event,2)">
               
                     <input type="button" value="Calcular" class="botao" onClick="calcularsalario(document.calc)">
 
